@@ -1,11 +1,26 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --header-height: 3.5rem;
+  --first-color: hsl(28, 88%, 62%);
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 75%);
+  --body-color: hsl(0, 0%, 6%);
+
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Dancing Script", cursive;
+
+  --h2-font-size: 1.25rem;
+  --small-font-size: 0.813rem;
+  --font-semi-bold: 600;
+  --z-tooltip: 10;
+  --z-fixed: 100;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,237 +28,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+}
+
+ul{
+  list-style: none;
+}
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  padding:0;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
-
-.banner {
-  position: relative;
-  margin-bottom: 75px;
-  margin-top: 160px;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-}
-
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  margin-bottom: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-section {
-  padding: 40px 20px;
-}
-
-.flash-sales,
-.best-selling-products,
-.explore-products,
-.new-arrival {
-  margin-bottom: 40px;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.product-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 160px;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.product-card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 5px;
-}
-
-.product-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-
-.product-card p {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.product-card span {
-  display: block;
-  margin-top: 10px;
-  font-size: 1.1rem;
-  color: #888;
-}
-
-.category-browse {
-  padding: 20px 0;
-}
-
-.category-browse h2 {
-  margin-bottom: 20px;
-}
-
-.category-browse .categories {
-  display: flex;
-  justify-content: space-around;
-}
-
-.category-browse .category {
-  text-align: center;
-}
-
-.flash-sales {
-  padding: 20px 0;
-}
-
-.flash-sales h2 {
-  margin-bottom: 20px;
-}
-
-.flash-sales .products {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-}
-
-.best-selling-products {
-  padding: 20px 0;
-}
-
-.best-selling-products h2 {
-  margin-bottom: 20px;
-}
-
-.best-selling-products .products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.explore-products {
-  padding: 20px 0;
-}
-
-.explore-products h2 {
-  margin-bottom: 20px;
-}
-
-.explore-products .products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.new-arrival {
-  padding: 20px 0;
-}
-
-.new-arrival h2 {
-  margin-bottom: 20px;
-}
-
-.new-arrival .products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  background-color: #333;
-  color: white;
-  padding: 20px;
-}
-
-.footer-section {
-  max-width: 200px;
-}
-
-
-
-
-
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-
-
-
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
-}

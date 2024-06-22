@@ -26,4 +26,7 @@ const ProductCard:React.FC<ProductCardProps> = ({product}) => {
   );
 }
 
+// posh-git, grace for purpose, project kamp, 
+// jacob sucks at code, Ambitious strikes, i'll be honest
+
 export default ProductCard
