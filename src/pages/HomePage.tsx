@@ -10,13 +10,13 @@ import Footer from '../components/layout/Footer'
 const HomePage: React.FC = () => {
   return (
     <div>
-      <Banner />
+      {/* <Banner />
       <FlashSales />
       < CategoryBrowse />
       <BestSellingProducts />
       <ExploreProducts/>
       <NewArrival />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }
