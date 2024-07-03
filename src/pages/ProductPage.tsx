@@ -2,8 +2,8 @@ import React from 'react'
 
 const ProductPage: React.FC = () => {
   return (
-    <div>
-      
+    <div className='products'>
+      <h1>hello</h1>
     </div>
   )
 }
