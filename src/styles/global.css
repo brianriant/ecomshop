@@ -9,9 +9,10 @@
 :root {
   --header-height: 3.5rem;
   --first-color: hsl(28, 88%, 62%);
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 75%);
-  --body-color: hsl(0, 0%, 6%);
+  --first-hover-color: rgba(255, 255, 255, 0.2);
+  --title-color: hsl(0, 8%, 7%);
+  --text-color: hsl(0, 12%, 5%);
+  --body-color: hsl(0, 18%, 86%);
 
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
