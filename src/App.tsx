@@ -1,25 +1,21 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import Navbar from './components/layout/navbar/Navbar'
+import Navbar from './components/navbar/Navbar'
 import ProductPage from './pages/ProductPage'
 
-const App: React.FC = () => {
+export default function App() {
   return (
     <Router>
       <Navbar />
       <main className="main-content">
-        <Router>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-          </Switch>
-          <Switch>
-            <Route exact path="/products" component={ProductPage} />
-          </Switch>
-        </Router>
+        <Routes>
+         <Route path='/' element={<HomePage />} />
+         <Route path='/' element={<ProductPage />} />
+        </Routes>
       </main>
     </Router>
   );
 }
 
-export default App
+
