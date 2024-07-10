@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
 
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 :root {
   --header-height: 3.5rem;
-  --first-color: hsl(28, 88%, 62%);
-  --first-hover-color: rgba(255, 255, 255, 0.2);
+  --first-color: hsla(28, 88%, 62%, 0.951);
+  --first-hover-color: rgba(255, 255, 255, 0.5);
   --title-color: hsl(0, 8%, 7%);
   --text-color: hsl(0, 12%, 5%);
-  --body-color: hsl(43, 30%, 80%);
+  --body-color: hsl(60, 25%, 98%);
 
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
@@ -41,5 +41,14 @@ ul{
 
 a {
   text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+a {
+  font-style: none;
 }
 
