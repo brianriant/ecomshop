@@ -2,11 +2,10 @@ import './ProductCard.css'
 
 
 interface ProductProps {
-    image: 'string';
-    title: 'string';
-    price: 'string';
+    image: string;
+    title: string;
+    price: string;
     onAddToCart: React.MouseEventHandler;
-
 }
 
 export default function ProductCard(
