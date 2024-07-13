@@ -1,51 +1,41 @@
 import ProductCard from "../components/productcard/Productcard";
-import showshop from "../assets";
-import './HomePage.css'
+import productlist from "../assets";
+import "./HomePage.css";
+import { useEffect, useState } from "react";
+import HeroSection from "../components/hero/HeroSection";
+
+interface Product {
+  id: number;
+  image: string;
+  title: string;
+  price: number;
+}
 
 export default function HomePage() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    setProducts(products);
+  }, [products]);
+
   const handleAddToCart = () => {
     alert("Product added to cart!");
   };
 
   return (
-    <div className="product-list">
-      <ProductCard
-        image={showshop}
-        title="Shoe shop"
-        price="29999"
-        onAddToCart={handleAddToCart}
-      />
-      <ProductCard
-        image={showshop}
-        title="Shoe shop"
-        price="29999"
-        onAddToCart={handleAddToCart}
-      />
-      <ProductCard
-        image={showshop}
-        title="Shoe shop"
-        price="29999"
-        onAddToCart={handleAddToCart}
-      />
-      <ProductCard
-        image={showshop}
-        title="Shoe shop"
-        price="29999"
-        onAddToCart={handleAddToCart}
-      />
-      <ProductCard
-        image={showshop}
-        title="Shoe shop"
-        price="29999"
-        onAddToCart={handleAddToCart}
-      />
-      <ProductCard
-        image={showshop}
-        title="Shoe shop"
-        price="29999"
-        onAddToCart={handleAddToCart}
-      />
-      {/* Add more ProductCard components as needed */}
-    </div>
-  )
+    <>
+      <HeroSection />
+      <div className="product-list">
+        {productlist.map((product) => (
+          <ProductCard
+            key={product.id}
+            image={product.image}
+            title={product.title}
+            price={product.price}
+            onAddToCart={handleAddToCart}
+          />
+        ))}
+      </div>
+    </>
+  );
 }

@@ -8,6 +8,7 @@ export default function HeroSection() {
           <p className="hero__subtitle">
             Your one stop shop for fully fledge e-commerce applications.
           </p>
+          <button className="hero__cta">Shop Now</button>
         </div>
       </section>
     );

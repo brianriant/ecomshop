@@ -1,20 +1,20 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Navbar from './components/navbar/Navbar'
-import ProductPage from './pages/ProductPage'
-import HeroSection from './components/hero/HeroSection';
+import Footer from './components/footer/Footer';
+import AboutUs from './components/aboutus/AboutUs';
 
 export default function App() {
   return (
     <Router>
       <Navbar />
-      <HeroSection />
       <main className="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/" element={<ProductPage />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }

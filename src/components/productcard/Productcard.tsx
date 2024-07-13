@@ -4,7 +4,7 @@ import './ProductCard.css'
 interface ProductProps {
     image: string;
     title: string;
-    price: string;
+    price: number;
     onAddToCart: React.MouseEventHandler;
 }
 
