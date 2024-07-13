@@ -1,3 +1,3 @@
-import showshop from './images/shoeshop.png'
+import productlist from './images/products.json'
 
-export default showshop
+export default productlist
