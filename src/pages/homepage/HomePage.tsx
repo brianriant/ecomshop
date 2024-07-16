@@ -1,8 +1,8 @@
-import ProductCard from "../components/productcard/Productcard";
-import productlist from "../assets";
+import { HeroSection, ProductCard} from '../../components'
+import productlist from "../../assets";
 import "./HomePage.css";
 import { useEffect, useState } from "react";
-import HeroSection from "../components/hero/HeroSection";
+
 
 interface Product {
   id: number;

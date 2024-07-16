@@ -13,18 +13,14 @@ export default function Footer() {
         <div className="footer__section">
           <h4>Navigation</h4>
           <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about-us">About Us</a>
-            </li>
-            <li>
-              <a href="/shop-now">Shop Now</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
+            {[
+              { to: "/", label: "Home" },
+              { to: "/about-us", label: "About Us" },
+            ].map((link, index) => (
+              <li key={index}>
+                <a href={link.to}>{link.label}</a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="footer__section">

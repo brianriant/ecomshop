@@ -15,7 +15,7 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    // { to: "/", label: "Home" },
+    { to: "/", label: "Home" },
     { to: "/about-us", label: "About Us" },
     // { to: "/favorite", label: "Favorite" },
     { to: "/", label: "Shop Now", className: "nav__cta" },
