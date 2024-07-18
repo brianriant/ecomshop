@@ -2,6 +2,11 @@ import "./Footer.css";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
+  const footerLinks = [
+    { to: "/", label: "Home" },
+    { to: "/about-us", label: "About Us" },
+  ];
+
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -13,10 +18,7 @@ export default function Footer() {
         <div className="footer__section">
           <h4>Navigation</h4>
           <ul>
-            {[
-              { to: "/", label: "Home" },
-              { to: "/about-us", label: "About Us" },
-            ].map((link, index) => (
+            {footerLinks.map((link, index) => (
               <li key={index}>
                 <a href={link.to}>{link.label}</a>
               </li>

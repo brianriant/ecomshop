@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./Navbar.css";
+import Button from "../button/Button";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,6 +47,8 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+
+          <Button children={'Shop Now'} variant="primary" onClick= {toggleMenu} />
           <button
             className="nav__close"
             id="nav-close"

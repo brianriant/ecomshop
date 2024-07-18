@@ -1,7 +1,7 @@
 /* Footer.css */
 
 .footer {
-    background-color: var(--title-colorpo);
+    background-color: var(--first-hover-color);
     color: #fff;
     padding: 40px 0;
     text-align: center;

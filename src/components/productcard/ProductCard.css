@@ -18,7 +18,6 @@
     width: 400px;
     height: 200px;
     border-bottom: 2px solid var(--first-color);
-    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -35,7 +34,7 @@
 
 .product-card__price {
     font-size: 1.1rem;
-    color: #ff5722;
+    color: hsl(14, 100%, 57%);
     margin: 0 0 15px 0;
 }
 
