@@ -1,6 +1,11 @@
 import './HeroSection.css'
+import Button from '../button/Button';
 
 export default function HeroSection() {
+  const handleShopNowClick = () => {
+    alert('Ready to shop 🤝')
+  }
+
     return (
       <section className="hero">
         <div className="hero__container">
@@ -8,7 +13,7 @@ export default function HeroSection() {
           <p className="hero__subtitle">
             Your one stop shop for fully fledge e-commerce applications.
           </p>
-          <button className="hero__cta">Shop Now</button>
+          <Button variant='primary' onClick={handleShopNowClick} >Shop Now</Button>
         </div>
       </section>
     );

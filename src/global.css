@@ -9,10 +9,13 @@
 :root {
   --header-height: 3.5rem;
   --first-color: hsla(28, 88%, 62%, 0.951);
-  --first-hover-color: rgba(255, 255, 255, 0.5);
+  --first-secondary-color: hsl(14, 100%, 57%);
+ 
+  --first-hover-color: hsl(71, 41%, 12%);
   --title-color: hsl(0, 8%, 7%);
   --text-color: hsl(0, 12%, 5%);
   --body-color: hsl(60, 25%, 98%);
+  --body-glass-color:rgba(255, 255, 255, 0.5);
 
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
@@ -30,9 +33,10 @@
 }
 
 body {
-  background-color: var(--body-color);
+  background-color: var(--body-glass-color);
   color: var(--text-color);
   font-family: var(--body-font);
+  scroll-behavior: smooth;
 }
 
 ul{
@@ -46,6 +50,8 @@ a {
 button {
   background-color: transparent;
   border: none;
+  font-style: none;
+  cursor: pointer;
 }
 
 a {

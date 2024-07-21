@@ -1,0 +1,43 @@
+/* Button.css */
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: var(--font-semi-bold);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn--primary {
+    background-color: var(--first-color);
+    color: var(--text-color);
+}
+
+.btn--primary:hover {
+    background-color: var(--first-hover-color);
+    color: var(--first-color);
+}
+
+.btn--secondary {
+    background-color: var(--first-secondary-color);
+    color: var(--text-color);
+}
+
+.btn--secondary:hover {
+    background-color: var(--first-hover-color);
+    color: var(--first-color);
+}
+
+.btn--danger {
+    background-color: #dc3545;
+    color: var(--text-color);
+}
+
+.btn--danger:hover {
+    background-color: #c82333;
+}
+
+.btn:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}

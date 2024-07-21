@@ -1,7 +1,7 @@
 /* Footer.css */
 
 .footer {
-    background-color: #333;
+    background-color: var(--first-hover-color);
     color: #fff;
     padding: 40px 0;
     text-align: center;

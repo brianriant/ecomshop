@@ -15,9 +15,10 @@
 }
 
 .product-card__image {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #e0e0e0;
+    width: 400px;
+    height: 200px;
+    border-bottom: 2px solid var(--first-color);
+    border-radius: 10px;
 }
 
 .product-card__info {
@@ -33,7 +34,7 @@
 
 .product-card__price {
     font-size: 1.1rem;
-    color: #ff5722;
+    color: hsl(14, 100%, 57%);
     margin: 0 0 15px 0;
 }
 

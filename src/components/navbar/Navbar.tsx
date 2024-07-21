@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./Navbar.css";
+import Button from "../button/Button";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,10 +16,10 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    // { to: "/", label: "Home" },
+    { to: "/", label: "Home" },
     { to: "/about-us", label: "About Us" },
     // { to: "/favorite", label: "Favorite" },
-    { to: "/", label: "Shop Now", className: "nav__cta" },
+    // { to: "/", label: "Shop Now", className: "nav__cta" },
   ];
 
   return (
@@ -37,7 +38,7 @@ export default function Navbar() {
               <li className="nav__item" key={index}>
                 <NavLink
                   to={link.to}
-                  className={`nav__link ${link.className || ""}`}
+                  className={`nav__link ${link || ""}`}
                   onClick={closeMenu}
                   role="menuitem"
                   tabIndex={menuOpen ? 0 : -1}>
@@ -45,7 +46,15 @@ export default function Navbar() {
                 </NavLink>
               </li>
             ))}
+           
           </ul>
+
+          <Button
+            children={"Shop Now"}
+            variant="primary"
+            onClick={toggleMenu}
+          />
+
           <button
             className="nav__close"
             id="nav-close"
