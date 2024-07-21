@@ -1,17 +1,15 @@
 /* Button.css */
 
 .btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
+    padding: 0.8rem 2rem;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: var(--font-semi-bold);
     transition: background-color 0.3s, color 0.3s;
 }
 
 .btn--primary {
     background-color: var(--first-color);
-    color: white;
+    color: var(--text-color);
 }
 
 .btn--primary:hover {
@@ -21,7 +19,7 @@
 
 .btn--secondary {
     background-color: var(--first-secondary-color);
-    color: white;
+    color: var(--text-color);
 }
 
 .btn--secondary:hover {
@@ -31,7 +29,7 @@
 
 .btn--danger {
     background-color: #dc3545;
-    color: white;
+    color: var(--text-color);
 }
 
 .btn--danger:hover {

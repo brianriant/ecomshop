@@ -33,7 +33,7 @@
 }
 
 body {
-  background-color: var(--body-color);
+  background-color: var(--body-glass-color);
   color: var(--text-color);
   font-family: var(--body-font);
   scroll-behavior: smooth;
@@ -50,6 +50,8 @@ a {
 button {
   background-color: transparent;
   border: none;
+  font-style: none;
+  cursor: pointer;
 }
 
 a {
