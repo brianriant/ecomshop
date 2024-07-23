@@ -1,8 +1,7 @@
-import { HeroSection, ProductCard} from '../../components'
+import { HeroSection, ProductCard } from "../../components";
 import productlist from "../../assets";
 import "./HomePage.css";
 import { useEffect, useState } from "react";
-
 
 interface Product {
   id: number;
@@ -18,9 +17,9 @@ export default function HomePage() {
     setProducts(products);
   }, [products]);
 
-  const handleAddToCart = () => {
-    alert("Product added to cart!");
-  };
+  function handleAddToCart() {
+    alert("Product added to cart");
+  }
 
   return (
     <>

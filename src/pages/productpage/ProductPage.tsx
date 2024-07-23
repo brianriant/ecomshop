@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import './ProductPage.css'
+import { ProductCard } from "../../components";
 
 interface Product {
   id: number;
@@ -8,18 +9,10 @@ interface Product {
   description: string;
   category: string;
   price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  tags: string[];
-  brand: string;
-  sku: string;
-  weight: number;
-  dimensions: {
-    width: number;
-    height: number;
-    depth: number;
-  };
+  rating: {
+    rate: number;
+    count: number;
+  }
   image: string;
 }
 
@@ -31,7 +24,7 @@ export default function ProductsPage() {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await fetch("https://dummyjson.com/products")
+        const response = await fetch("https://fakestoreapi.com/products");
         if(!response.ok){
           throw new Error('Network response not ok')
         }
@@ -54,34 +47,24 @@ export default function ProductsPage() {
     return <div>{error}</div>
   }
 
+   function handleAddToCart() {
+     alert("Product added to cart");
+   }
 
   return (
-    <div className="products">
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
-          <img
-            src={product.image}
-            alt={product.title}
-            className="product-image"
+    <section className="products__page">
+      <h1 className="products__h1">Other Products</h1>
+      <div className="products">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            image={product.image}
+            title={product.title}
+            price={product.price}
+            onAddToCart={handleAddToCart}
           />
-          <h2 className="product-title">{product.title}</h2>
-          <p className="product-description">{product.description}</p>
-          <p className="product-category">Category: {product.category}</p>
-          <p className="product-price">${product.price.toFixed(2)}</p>
-          <p className="product-discount">
-            Discount: {product.discountPercentage}%
-          </p>
-          <p className="product-rating">Rating: {product.rating}</p>
-          <p className="product-stock">Stock: {product.stock}</p>
-          <p className="product-brand">Brand: {product.brand}</p>
-          <p className="product-sku">SKU: {product.sku}</p>
-          <p className="product-weight">Weight: {product.weight}g</p>
-          <p className="product-dimensions">
-            Dimensions: {product.dimensions.width} x {product.dimensions.height}{" "}
-            x {product.dimensions.depth} cm
-          </p>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 }
