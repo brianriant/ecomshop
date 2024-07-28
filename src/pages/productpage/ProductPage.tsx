@@ -1,67 +1,60 @@
-
 import { useEffect, useState } from "react";
-import './ProductPage.css'
+import "./ProductPage.css";
+import { ProductProps } from "../../components/productcard/Productcard";
 import { ProductCard } from "../../components";
 
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  price: number;
-  rating: {
-    rate: number;
-    count: number;
-  }
-  image: string;
-}
 
 export default function ProductsPage() {
-  const [products, setProducts] = useState<Product[]>([])
-  const [loading,setLoading] = useState<boolean>(true);
+  const [products, setProducts] = useState<ProductProps[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products");
-        if(!response.ok){
-          throw new Error('Network response not ok')
+        const response = await fetch(
+          "https://ecomshop-nodeendpoint.vercel.app/products"
+        );
+        console.log(response)
+        if (!response.ok) {
+          throw new Error("Network response not ok");
         }
         const productsData = await response.json();
         setProducts(productsData);
-        setLoading(false)
-      }catch(error) {
-        setError('Failed to fetch poducts');
+        setLoading(false);
+      } catch (error) {
+        setError("Failed to fetch poducts");
         setLoading(false);
       }
     };
 
     getProducts();
-  },[]);
-   
+  }, []);
+
   if (loading) {
-    return <div>⚡⚡🤝Loading...</div>
+    return <div>⚡⚡🤝Loading...</div>;
   }
- if (error) {
-    return <div>{error}</div>
+  if (error) {
+    return <div>{error}</div>;
   }
 
-   function handleAddToCart() {
-     alert("Product added to cart");
-   }
+  function handleAddToCart() {
+    alert("Product added to cart");
+  }
 
   return (
     <section className="products__page">
-      <h1 className="products__h1">Other Products</h1>
       <div className="products">
         {products.map((product) => (
           <ProductCard
             key={product.id}
+            id={product.id}
             image={product.image}
             title={product.title}
+            category={product.category}
+            description= {product.description}
             price={product.price}
-            onAddToCart={handleAddToCart}
+            onBuy={handleAddToCart}
           />
         ))}
       </div>
