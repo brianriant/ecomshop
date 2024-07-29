@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./ProductPage.css";
 import { ProductProps } from "../../components/productcard/Productcard";
 import { ProductCard } from "../../components";
+import Loader from "../../components/loader/Loader";
 
 
 export default function ProductsPage() {
@@ -32,14 +33,14 @@ export default function ProductsPage() {
   }, []);
 
   if (loading) {
-    return <div>⚡⚡🤝Loading...</div>;
+    return <Loader/>
   }
   if (error) {
-    return <div>{error}</div>;
+    return <div className="status">{error}</div>;
   }
 
   function handleAddToCart() {
-    alert("Product added to cart");
+    alert("product bought ✔☑");
   }
 
   return (
