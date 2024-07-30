@@ -1,73 +1,90 @@
-/* Footer.css */
-
 .footer {
-    background-color: var(--first-hover-color);
-    color: #fff;
-    padding: 40px 0;
+    background-image: var(--background-image);
+    color: var(--text-color);
+    padding: 200px 0 80px;
+    margin: 60px 0 0;
     text-align: center;
     width: 100%;
+    position: relative;
+    --size: 50px;
+        --R: calc(var(--size)*1.28);
+    
+        --mask:
+            radial-gradient(var(--R) at 50% calc(1.8*var(--size)), #000 99%, #0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+            radial-gradient(var(--R) at 50% calc(-.8*var(--size)), #0000 99%, #000 101%) 50% var(--size)/calc(4*var(--size)) 100% repeat-x;
+    
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
 }
 
 .footer__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     gap: 20px;
 }
 
 .footer__section {
+    flex: 1;
     max-width: 300px;
-    text-align: center;
+    margin: 10px 0;
 }
 
 .footer__section h4 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1.2rem;
 }
 
 .footer__section p,
 .footer__section ul,
 .footer__section a {
-    color: #ccc;
-    font-size: 1rem;
+    color: var(--title-color);
+    font-size: 1.2rem;
     margin: 5px 0;
+    font-weight: bold;
+}
+
+.footer__section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__section a {
+    color: var(--title-color);
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer__section a:hover {
-    color: #fff;
+    color: var(--body-color);
+    text-decoration: underline;
 }
 
 .footer__socials {
     display: flex;
     gap: 15px;
     justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .footer__socials a {
-    color: #ccc;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: var(--title-color);
+    transition: transform 0.3s, color 0.3s;
 }
 
 .footer__socials a:hover {
-    color: #fff;
+    transform: translateY(-20px);
+    color: var(--body-color);
 }
 
 .footer__bottom {
-    margin-top: 20px;
-    border-top: 1px solid #444;
     padding-top: 20px;
     font-size: 0.9rem;
-    color: #ccc;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media (min-width: 768px) {
-    .footer__container {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .footer__section {
-        text-align: left;
-    }
+    color: var(--title-color);
 }

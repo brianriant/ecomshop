@@ -3,12 +3,7 @@
 .products {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 50px;
     gap: 20px;
     justify-content: center;
-    padding: 20px;
-}
-
-.products__h1 {
-    margin: 40px 550px;
-    color: var(--text-color);
 }

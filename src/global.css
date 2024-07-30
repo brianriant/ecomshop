@@ -8,14 +8,27 @@
 
 :root {
   --header-height: 3.5rem;
-  --first-color: hsla(28, 88%, 62%, 0.951);
+  --first-color: hsla(28, 99%, 60%, 0.953);
   --first-secondary-color: hsl(14, 100%, 57%);
  
   --first-hover-color: hsl(71, 41%, 12%);
-  --title-color: hsl(0, 8%, 7%);
-  --text-color: hsl(0, 12%, 5%);
+  --title-color: hsl(0, 0%, 27%);
+  --type-color: hsl(0, 0%, 60%);
+  --text-color: hsl(0, 0%, 20%);
   --body-color: hsl(60, 25%, 98%);
   --body-glass-color:rgba(255, 255, 255, 0.5);
+  --price-color: hsl(0, 0%, 64%);
+  --background-color: #feca57;
+    --background-image: linear-gradient(45deg, #feca57 30%, #d3d3d3 74%);
+
+  --image-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --container-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  --masks:
+      radial-gradient(20px at 75% 100%, #0000 98%, #000) 50% calc(100% - 20px)/80px 100% repeat-x,
+      radial-gradient(20px at 25% 50%, #000 99%, #0000 101%) bottom/80px 40px repeat-x;
+    
 
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
