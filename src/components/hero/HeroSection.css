@@ -4,8 +4,8 @@
     padding: 100px 0;
     text-align: center;
     color: var(--body-color);
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
+    -webkit-mask: var(--masks);
+       mask: var(--masks);
 }
 
 
