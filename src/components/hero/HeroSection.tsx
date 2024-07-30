@@ -13,7 +13,9 @@ export default function HeroSection() {
           <p className="hero__subtitle">
             Your one stop shop for fully fledge e-commerce applications.
           </p>
-          <Button variant='primary' onClick={handleShopNowClick} >Shop Now</Button>
+          <Button variant="primary" onClick={handleShopNowClick}>
+            Shop Now
+          </Button>
         </div>
       </section>
     );

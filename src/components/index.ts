@@ -1,6 +1,6 @@
 import HeroSection from "./hero/HeroSection";
 import Footer from "./footer/Footer";
-import AboutUs from "./aboutus/AboutUs"
+import AboutUs from "./aboutus/About"
 import Navbar from "./navbar/Navbar";
 import ProductCard from "./productcard/Productcard";
 import Button from "./button/Button";

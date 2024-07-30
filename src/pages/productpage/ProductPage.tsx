@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ProductPage.css";
 import { ProductProps } from "../../components/productcard/Productcard";
-import { ProductCard } from "../../components";
+import { ProductCard, HeroSection } from "../../components";
 import Loader from "../../components/loader/Loader";
 
 
@@ -45,6 +45,7 @@ export default function ProductsPage() {
 
   return (
     <section className="products__page">
+      <HeroSection />
       <div className="products">
         {products.map((product) => (
           <ProductCard
@@ -53,7 +54,7 @@ export default function ProductsPage() {
             image={product.image}
             title={product.title}
             category={product.category}
-            description= {product.description}
+            description={product.description}
             price={product.price}
             onBuy={handleAddToCart}
           />

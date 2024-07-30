@@ -1,10 +1,13 @@
 import "./Footer.css";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 export default function Footer() {
   const footerLinks = [
     { to: "/", label: "Home" },
     { to: "/about-us", label: "About Us" },
+    { href: "https://facebook.com", icon: <FaFacebook /> },
+    { href: "https://twitter.com", icon: <FaXTwitter /> },
+    { href: "https://instagram.com", icon: <FaInstagram /> },
   ];
 
   return (
@@ -28,15 +31,11 @@ export default function Footer() {
         <div className="footer__section">
           <h4>Follow Us</h4>
           <div className="footer__socials">
-            <a href="https://facebook.com">
-              <FaFacebook />
-            </a>
-            <a href="https://twitter.com">
-              <FaTwitter />
-            </a>
-            <a href="https://instagram.com">
-              <FaInstagram />
-            </a>
+            {footerLinks.map((social, index) => (
+              <a key={index} href={social.href}>
+                {social.icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>

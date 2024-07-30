@@ -37,19 +37,6 @@
     display: none;
 }
 
-.nav__cta {
-    background-color: var(--first-color);
-    color: var(--title-color);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    padding: 0.75rem 1.5rem;
-}
-
-.nav__cta:hover {
-    background-color: hsl(72, 41%, 12%);
-}
 
 .nav__list {
    display: flex;

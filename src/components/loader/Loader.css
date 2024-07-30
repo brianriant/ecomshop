@@ -1,9 +1,16 @@
 .loading__container {
     position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: var(--background-image);
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    z-index: 200;
 }
 
 .dash {
@@ -11,7 +18,7 @@
     width: 35px;
     height: 15px;
     border-radius: 8px;
-    background: #ffa02c;
+    background: var(--title-color);
     box-shadow: 0 0 10px 0 #FECDFF;
 }
 

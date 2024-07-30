@@ -8,7 +8,9 @@
 }
 
 .btn--primary {
-    background-color: var(--first-color);
+    background-color: var(--background-color);
+    box-shadow: var(--image-shadow);
+    border: 2px solid var(--first-hover-color);
     color: var(--text-color);
 }
 
