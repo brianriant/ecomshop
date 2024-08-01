@@ -3,49 +3,75 @@ import "./ProductPage.css";
 import { ProductProps } from "../../components/productcard/Productcard";
 import { ProductCard, HeroSection } from "../../components";
 import Loader from "../../components/loader/Loader";
+import { fetchProducts } from "../../api/productApi";
 
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<ProductProps[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const getProducts = async () => {
+    const loadProductsAndCategories = async () => {
       try {
-        const response = await fetch(
-          "https://ecomshop-nodeendpoint.vercel.app/products"
-        );
-        console.log(response)
-        if (!response.ok) {
-          throw new Error("Network response not ok");
-        }
-        const productsData = await response.json();
-        setProducts(productsData);
+        const { products: fetchedProducts, categories: fetchedCategories } =
+          await fetchProducts();
+        setProducts(fetchedProducts);
+        setCategories(fetchedCategories);
         setLoading(false);
       } catch (error) {
-        setError("Failed to fetch poducts");
+        if (error instanceof Error){
+          setError(error.message);
+        }else {
+          setError(
+            "An unknown error occurred"
+          )
+        }
         setLoading(false);
       }
     };
 
-    getProducts();
+    loadProductsAndCategories();
   }, []);
 
+  const handleSearch = async (searchTerm: string, category: string) => {
+    setLoading(true);
+    try {
+      const { products: allProducts } = await fetchProducts();
+      const filteredProducts = allProducts.filter((product) => {
+        return (
+          (searchTerm
+            ? product.title.toLowerCase().includes(searchTerm.toLowerCase())
+            : true) && (category ? product.category === category : true)
+        );
+      });
+      setProducts(filteredProducts);
+      setLoading(false);
+    } catch (error) {
+      setError("Failed to filter products");
+      setLoading(false);
+    }
+  };
+
   if (loading) {
-    return <Loader/>
+    return <Loader />;
   }
   if (error) {
     return <div className="status">{error}</div>;
   }
 
-  function handleAddToCart() {
-    alert("product bought ✔☑");
+  if (loading) {
+    return <Loader />;
   }
+  if (error) {
+    return <div className="status">{error}</div>;
+  }
+
 
   return (
     <section className="products__page">
-      <HeroSection />
+      <HeroSection onSearch={handleSearch} categories={categories} />
       <div className="products">
         {products.map((product) => (
           <ProductCard
@@ -56,7 +82,7 @@ export default function ProductsPage() {
             category={product.category}
             description={product.description}
             price={product.price}
-            onBuy={handleAddToCart}
+            onBuy={() => alert("product bought 🤝😁")}
           />
         ))}
       </div>
