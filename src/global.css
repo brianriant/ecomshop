@@ -11,15 +11,16 @@
   --first-color: hsla(28, 99%, 60%, 0.953);
   --first-secondary-color: hsl(14, 100%, 57%);
  
-  --first-hover-color: hsl(71, 41%, 12%);
+  --first-hover-color: hsl(70, 41%, 12%);
   --title-color: hsl(0, 0%, 27%);
   --type-color: hsl(0, 0%, 60%);
   --text-color: hsl(0, 0%, 20%);
   --body-color: hsl(60, 25%, 98%);
-  --body-glass-color:rgba(255, 255, 255, 0.5);
+  --body-glass-color:rgba(255, 255, 255, 0.1);
   --price-color: hsl(0, 0%, 64%);
-  --background-color: #feca57;
-    --background-image: linear-gradient(45deg, #feca57 30%, #d3d3d3 74%);
+  --background-color2: hsl(0, 0%, 83%);
+  --background-color: hsl(41, 99%, 67%);
+    --background-image: linear-gradient(45deg, hsl(41, 99%, 67%) 30%, hsl(0, 0%, 83%) 74%);
 
   --image-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --container-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,

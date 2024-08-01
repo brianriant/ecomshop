@@ -18,6 +18,7 @@
 .nav__logo {
     color: var(--first-color);
     font-weight: bold;
+    text-transform: uppercase;
     transition: color 0.4s ease;
     font-size: var(--h2-font-size);
     font-family: var(--second-font);
