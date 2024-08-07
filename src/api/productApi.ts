@@ -5,6 +5,8 @@ export async function fetchProducts(): Promise<{
   categories: string[];
 }> {
   try {
+    //https://fakestoreapi.com/products
+    // https://fake-store-api.mock.beeceptor.com/api/products
     const response = await fetch(
       "https://ecomshopendpoint.vercel.app/products"
     );
@@ -14,12 +16,12 @@ export async function fetchProducts(): Promise<{
     const productsData: ProductProps[] = await response.json();
 
     // Extract categories from products
-      const categoriesData: string[] = Array.from(
-        new Set(productsData.map((product) => product.category))
-      );
+    const categoriesData: string[] = Array.from(
+      new Set(productsData.map((product) => product.category))
+    ).slice(0, 20);
 
     return { products: productsData, categories: categoriesData };
   } catch (error) {
-    throw new Error("Fsiled to fetch products");
+    throw new Error("Failed to fetch products");
   }
 }
