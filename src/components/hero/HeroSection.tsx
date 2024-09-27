@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../button/Button";
 import { FaSearch } from "react-icons/fa";
+import "./HeroSection.css";
 // import { ProductProps } from "../productcard/Productcard";
 
 interface HeroSectionProps {
