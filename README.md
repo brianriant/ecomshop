@@ -2,7 +2,7 @@
 
 <p>At Ecomshop, we provide cutting-edge eCommerce web applications designed to help you create and manage your online store effortlessly. With our platform, you can customize your store, integrate payment gateways, manage inventory, and much more—all in one place.</p>
 
-![Showcase Banner](https://your-ecomshop-banner-link.com)
+![Showcase Banner](/src/assets/images/MacBook%20Air%20-%201.png)
 
 <h2>Features</h2>
 
