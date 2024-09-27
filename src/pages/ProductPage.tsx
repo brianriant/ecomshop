@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import "./ProductPage.css";
-import { ProductProps } from "../../components/productcard/Productcard";
-import { ProductCard, HeroSection } from "../../components";
-import Loader from "../../components/loader/Loader";
-import { fetchProducts } from "../../api/productApi";
-
+import { ProductProps } from "../components/productcard/Productcard";
+import ProductCard from "../components/productcard/Productcard";
+import Loader from "../components/loader/Loader";
+import { fetchProducts } from "../api/productApi";
+import HeroSection from "../components/hero/HeroSection";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<ProductProps[]>([]);
@@ -21,12 +20,10 @@ export default function ProductsPage() {
         setCategories(fetchedCategories);
         setLoading(false);
       } catch (error) {
-        if (error instanceof Error){
+        if (error instanceof Error) {
           setError(error.message);
-        }else {
-          setError(
-            "An unknown error occurred"
-          )
+        } else {
+          setError("An unknown error occurred");
         }
         setLoading(false);
       }
@@ -35,6 +32,7 @@ export default function ProductsPage() {
     loadProductsAndCategories();
   }, []);
 
+  // Function to filter products based on search term and category
   const handleSearch = async (searchTerm: string, category: string) => {
     setLoading(true);
     try {
@@ -57,22 +55,15 @@ export default function ProductsPage() {
   if (loading) {
     return <Loader />;
   }
+
   if (error) {
     return <div className="status">{error}</div>;
   }
-
-  if (loading) {
-    return <Loader />;
-  }
-  if (error) {
-    return <div className="status">{error}</div>;
-  }
-
 
   return (
     <section className="products__page">
       <HeroSection onSearch={handleSearch} categories={categories} />
-      <div className="products">
+      <div className="flex flex-wrap gap-2.5 justify-center my-12 mx-auto ">
         {products.map((product) => (
           <ProductCard
             key={product.id}
@@ -82,9 +73,9 @@ export default function ProductsPage() {
             category={product.category}
             description={product.description}
             price={product.price}
-            onBuy={() => alert("product bought 🤝😁")}
+            onBuy={() => alert("Product bought 🤝😁")}
           />
-        )).slice(0, 5)}
+        ))}
       </div>
     </section>
   );

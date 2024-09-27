@@ -18,7 +18,7 @@ export async function fetchProducts(): Promise<{
     // Extract categories from products
     const categoriesData: string[] = Array.from(
       new Set(productsData.map((product) => product.category))
-    ).slice(0, 20);
+    );
 
     return { products: productsData, categories: categoriesData };
   } catch (error) {

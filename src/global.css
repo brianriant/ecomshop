@@ -1,74 +1,86 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-:root {
-  --header-height: 3.5rem;
-  --first-color: hsla(28, 99%, 60%, 0.953);
-  --first-secondary-color: hsl(14, 100%, 57%);
- 
-  --first-hover-color: hsl(70, 41%, 12%);
-  --title-color: hsl(0, 0%, 27%);
-  --type-color: hsl(0, 0%, 60%);
-  --text-color: hsl(0, 0%, 20%);
-  --body-color: hsl(60, 25%, 98%);
-  --body-glass-color:rgba(255, 255, 255, 0.1);
-  --price-color: hsl(0, 0%, 64%);
-  --background-color2: hsl(0, 0%, 83%);
-  --background-color: hsl(41, 99%, 67%);
+  @layer base {
+    html {
+      font-family: "Inter",
+        sans-serif;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  :root {
+    --header-height: 3.5rem;
+    --first-color: hsla(28, 99%, 60%, 0.953);
+    --first-secondary-color: hsl(14, 100%, 57%);
+
+    --first-hover-color: hsl(70, 41%, 12%);
+    --title-color: hsl(0, 0%, 27%);
+    --type-color: hsl(0, 0%, 60%);
+    --text-color: hsl(0, 0%, 20%);
+    --body-color: hsl(60, 25%, 98%);
+    --body-glass-color: rgba(255, 255, 255, 0.1);
+    --price-color: hsl(0, 0%, 64%);
+    --background-color2: hsl(0, 0%, 83%);
+    --background-color: hsl(41, 99%, 67%);
     --background-image: linear-gradient(45deg, hsl(41, 99%, 67%) 30%, hsl(0, 0%, 83%) 74%);
 
-  --image-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  --container-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    --image-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --container-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
-  --masks:
+    --masks:
       radial-gradient(20px at 75% 100%, #0000 98%, #000) 50% calc(100% - 20px)/80px 100% repeat-x,
       radial-gradient(20px at 25% 50%, #000 99%, #0000 101%) bottom/80px 40px repeat-x;
-    
-
-  --body-font: "Montserrat", sans-serif;
-  --second-font: "Dancing Script", cursive;
-
-  --h2-font-size: 1.25rem;
-  --small-font-size: 0.813rem;
-  --font-semi-bold: 600;
-  --z-tooltip: 10;
-  --z-fixed: 100;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  background-color: var(--body-glass-color);
-  color: var(--text-color);
-  font-family: var(--body-font);
-  scroll-behavior: smooth;
-}
 
 
-ul{
-  list-style: none;
-}
+    --body-font: "Inter",
+      sans-serif;
+    --second-font: "Dancing Script", cursive;
 
-a {
-  text-decoration: none;
-}
+    --h2-font-size: 1.25rem;
+    --small-font-size: 0.813rem;
+    --font-semi-bold: 600;
+    --z-tooltip: 10;
+    --z-fixed: 100;
 
-button {
-  background-color: transparent;
-  border: none;
-  font-style: none;
-  cursor: pointer;
-}
-a {
-  font-style: none;
-}
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
+  body {
+    background-color: var(--body-glass-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    scroll-behavior: smooth;
+  }
+
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-style: none;
+    cursor: pointer;
+  }
+
+  a {
+    font-style: none;
+  }
