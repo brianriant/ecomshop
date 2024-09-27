@@ -3,7 +3,7 @@
 .products {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
-    gap: 20px;
+    margin: 50px auto 10px;
+    gap: 10px;
     justify-content: center;
 }
