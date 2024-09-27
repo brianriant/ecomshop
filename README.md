@@ -1,7 +1,48 @@
-<h1>Ecomshop: Your Ultimate eCommerce Destination!</h1> <p>At Ecomshop, you can discover, rate, review, and upload images of your favorite products. Follow friends to see their recommendations, save items for future purchases, and explore a wide variety of products with ease. Shop smarter and quicker with our user-friendly platform!</p>
+<h1>Ecomshop: Build Your Perfect eCommerce Platform!</h1>
 
+<p>At Ecomshop, we provide cutting-edge eCommerce web applications designed to help you create and manage your online store effortlessly. With our platform, you can customize your store, integrate payment gateways, manage inventory, and much more—all in one place.</p>
 
-<h2>Key Features</h2> <ul> <li><strong>Discover Products:</strong> Find exciting new items across a wide range of categories.</li> <li><strong>Rate &amp; Review:</strong> Share your thoughts on products you've tried, helping others make informed choices.</li> <li><strong>Upload Images:</strong> Showcase multiple images of products you've purchased.</li> <li><strong>Follow Friends:</strong> Stay updated on your friends' favorite finds and recommendations.</li> <li><strong>Save for Later:</strong> Bookmark items for future shopping.</li> <li><strong>Smart Search:</strong> Easily search for products using our intuitive search feature.</li> <li><strong>Secure Login:</strong> Apple OAuth integration for safe and fast login.</li> </ul> <h2>Technical Details</h2> <h3>Backend</h3> <ul> <li><strong>Language:</strong> TypeScript</li> <li><strong>Framework:</strong> Nest.js</li> <li><strong>ORM:</strong> Prisma</li> <li><strong>Database:</strong> PostgreSQL</li> <li><strong>Infrastructure:</strong> Railway, AWS S3</li> </ul>
-<a href="https://github.com/ecomshop/backend">View Backend Repository</a>
+![Showcase Banner](https://your-ecomshop-banner-link.com)
 
-<h3>Frontend</h3> <ul> <li><strong>Framework:</strong> React Native</li> <li><strong>Tooling:</strong> Expo</li> <li><strong>Language:</strong> TypeScript</li> </ul> <h2>Credits</h2> <p>Ecomshop is built and maintained by [Your Team Name]. Special thanks to all contributors and the developers behind the libraries and frameworks used in this project.</p> <h2>License</h2> <p>This project is licensed under the MIT License.</p>
+<h2>Features</h2>
+
+<ul>
+    <li><strong>Customizable Storefront:</strong> Build and design a unique storefront that reflects your brand.</li>
+    <li><strong>Payment Integration:</strong> Seamlessly integrate payment gateways like Stripe and PayPal.</li>
+    <li><strong>Product Management:</strong> Easily add, edit, and categorize your products.</li>
+    <li><strong>Order Tracking:</strong> Stay updated with real-time order status and customer notifications.</li>
+    <li><strong>Customer Management:</strong> Manage customer profiles and track shopping behavior.</li>
+    <li><strong>Inventory Control:</strong> Keep track of stock levels and automate inventory updates.</li>
+    <li><strong>SEO & Analytics:</strong> Optimize your store for search engines and analyze visitor data.</li>
+</ul>
+
+<h2>Technical Stack</h2>
+
+<a href="https://github.com/jacobbinnie/finds-backend">View Backend Repository Here</a>
+
+<h3>Backend</h3>
+
+<ul>
+    <li><strong>Language:</strong> TypeScript</li>
+    <li><strong>Framework:</strong> Express.js</li>
+    <li><strong>ORM:</strong> Prisma</li>
+    <li><strong>Database:</strong> PostgreSQL</li>
+    <li><strong>Infrastructure:</strong> AWS, DigitalOcean</li>
+</ul>
+
+<h3>Frontend</h3>
+
+<ul>
+    <li><strong>Framework:</strong> React</li>
+    <li><strong>Tooling:</strong> Vite.js</li>
+    <li><strong>Language:</strong> TypeScript</li>
+</ul>
+
+<h2>Credits</h2>
+
+<p> Ecomshop is developed and maintained by Brian Riant a skilled engineers passionate about eCommerce technology. We are grateful to the open-source community for the tools and libraries that power our platform.
+</p>
+
+<h2>License</h2>
+
+<p>This project is licensed under the MIT License.</p>
