@@ -84,7 +84,7 @@ export default function ProductsPage() {
             price={product.price}
             onBuy={() => alert("product bought 🤝😁")}
           />
-        ))}
+        )).slice(0, 5)}
       </div>
     </section>
   );
