@@ -1,30 +1,7 @@
-# React + TypeScript + Vite
+<h1>Ecomshop: Your Ultimate eCommerce Destination!</h1> <p>At Ecomshop, you can discover, rate, review, and upload images of your favorite products. Follow friends to see their recommendations, save items for future purchases, and explore a wide variety of products with ease. Shop smarter and quicker with our user-friendly platform!</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<h2>Key Features</h2> <ul> <li><strong>Discover Products:</strong> Find exciting new items across a wide range of categories.</li> <li><strong>Rate &amp; Review:</strong> Share your thoughts on products you've tried, helping others make informed choices.</li> <li><strong>Upload Images:</strong> Showcase multiple images of products you've purchased.</li> <li><strong>Follow Friends:</strong> Stay updated on your friends' favorite finds and recommendations.</li> <li><strong>Save for Later:</strong> Bookmark items for future shopping.</li> <li><strong>Smart Search:</strong> Easily search for products using our intuitive search feature.</li> <li><strong>Secure Login:</strong> Apple OAuth integration for safe and fast login.</li> </ul> <h2>Technical Details</h2> <h3>Backend</h3> <ul> <li><strong>Language:</strong> TypeScript</li> <li><strong>Framework:</strong> Nest.js</li> <li><strong>ORM:</strong> Prisma</li> <li><strong>Database:</strong> PostgreSQL</li> <li><strong>Infrastructure:</strong> Railway, AWS S3</li> </ul>
+<a href="https://github.com/ecomshop/backend">View Backend Repository</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<h3>Frontend</h3> <ul> <li><strong>Framework:</strong> React Native</li> <li><strong>Tooling:</strong> Expo</li> <li><strong>Language:</strong> TypeScript</li> </ul> <h2>Credits</h2> <p>Ecomshop is built and maintained by [Your Team Name]. Special thanks to all contributors and the developers behind the libraries and frameworks used in this project.</p> <h2>License</h2> <p>This project is licensed under the MIT License.</p>
