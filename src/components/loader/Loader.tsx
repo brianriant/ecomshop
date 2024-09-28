@@ -3,11 +3,8 @@ import './Loader.css'
 
 export default function Loader() {
     return (
-      <div className="loading__container">
+      <div className=" bg-[var(--body-glass-color)] backdrop-blur-md absolute h-screen w-screen flex items-center justify-center top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 ">
         <div className="dash uno"></div>
-        <div className="dash dos"></div>
-        <div className="dash tres"></div>
-        <div className="dash cuatro"></div>
       </div>
     );
 }

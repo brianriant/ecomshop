@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     background-image: var(--background-image);
     width: 900px;
-    height: 600px;
+    height: 650px;
     transition: transform 0.2s;
     margin: 20px;
     border-radius: 24px;
