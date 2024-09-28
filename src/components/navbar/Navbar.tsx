@@ -20,22 +20,24 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="header">
-      <nav className="nav container" aria-label="Main Navigation">
-        <NavLink to="/" className="nav__logo" onClick={closeMenu}>
+    <header className="fixed w-[100%] top-0 bg-[var(--body-glass-color)] z-[var(--z-fixed)] border-b backdrop-blur-md mx-auto">
+      <nav
+        className="flex items-center justify-between h-[var(--header-height)] m-4 container"
+        aria-label="Main Navigation">
+        <NavLink to="/" className="text-[var(--first-color)] font-bold uppercase size-[var(--h2-font-size)] " onClick={closeMenu}>
           Ecomshop
         </NavLink>
 
         <div
-          className={`nav__menu ${menuOpen ? "active" : ""} `}
+          className={`flex items-center gap-5 nav__menu ${menuOpen ? "active" : ""} `}
           id="nav-menu"
           role="menu">
-          <ul className="nav__list">
+          <ul className="flex items-center justify-between nav__list">
             {navLinks.map((link, index) => (
-              <li className="nav__item" key={index}>
+              <li className="ml-8" key={index}>
                 <NavLink
                   to={link.to}
-                  className={`nav__link ${link || ""}`}
+                  className={`text-[var(--title-color)] font-semibold transition hover:text-[var(--first-color) hover:underline] ${link || ""}`}
                   onClick={closeMenu}
                   role="menuitem"
                   tabIndex={menuOpen ? 0 : -1}>
@@ -43,7 +45,6 @@ export default function Navbar() {
                 </NavLink>
               </li>
             ))}
-           
           </ul>
 
           <button
@@ -56,7 +57,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="nav__toggle"
+          className={`nav__toggle ${menuOpen ? "active" : ""}`}
           id="nav-toggle"
           onClick={toggleMenu}
           aria-label="Toggle menu">
