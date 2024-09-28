@@ -2,7 +2,6 @@ import { useState } from "react";
 import Button from "../button/Button";
 import { FaSearch } from "react-icons/fa";
 import "./HeroSection.css";
-// import { ProductProps } from "../productcard/Productcard";
 
 interface HeroSectionProps {
   onSearch: (searchTerm: string, category: string) => void;
@@ -28,9 +27,12 @@ export default function HeroSection({
   return (
     <section className="hero">
       <div className="hero__container">
-        <h1 className="hero__title">Welcome to Ecomshop</h1>
+        <h1 className="hero__title">
+          Welcome to Ecomshop Empowering Your Commerce Dreams!
+        </h1>
         <p className="hero__subtitle">
-          Your one stop shop for fully fledged e-commerce applications.
+          Your Ultimate Destination for Powerful E-Commerce Solutions. Build,
+          Grow, and Succeed with Tailored Tools for Every Step of Your Journey.
         </p>
 
         <div className="hero__search">

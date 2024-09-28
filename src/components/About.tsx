@@ -15,7 +15,7 @@ export default function About(){
           <p className="text-2xl mb-10 font-bold text-[var(--type-color)]">
             We are your one-stop destination for the best e-commerce experience.
           </p>
-          <div className="flex flex-row gap-10 items-center flex-wrap md:flex-col md:text-center">
+          <div className="flex  gap-10 items-center flex-wrap flex-col md:text-center">
             <div className="flex-1 text-left text-[var(--text-color)] text-base leading-relaxed md:text-center">
               <p className="mb-5 font-bold">
                 At Ecomshop, we believe in providing our customers with the
